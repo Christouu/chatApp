@@ -10,3 +10,4 @@ You have to register to make an account or if you have one just log in.
 After logging in you can search for people to chat using the right input field.
 If it matches a name in the db , you can click it and it will open a private chat room on the left, where you can exchange messages in real time
 You can also see the last message send on the right under their photo and you can send images also.
+The blue messages are your own adn the whute ones are your friends.
