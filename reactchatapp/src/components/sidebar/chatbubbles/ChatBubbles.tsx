@@ -3,13 +3,17 @@ import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../../firebase";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../context/AuthContext";
+import { ChatContext } from "../../../context/UserContext";
 
 const ChatBubbles = () => {
   const { currentUser } = useContext(AuthContext);
+  const { dispatch } = useContext(ChatContext);
 
   const [chats, setChats] = useState([]);
 
-  const handleSelect = (chat: any) => {};
+  const handleSelect = (chat: any) => {
+    dispatch({ type: "CHANGE_USER", payload: chat });
+  };
 
   useEffect(() => {
     const getChats = () => {
@@ -25,8 +29,6 @@ const ChatBubbles = () => {
 
     currentUser.uid && getChats();
   }, [currentUser.uid]);
-
-  console.log(chats);
 
   return (
     <div className="chats">
