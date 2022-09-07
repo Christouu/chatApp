@@ -1,3 +1,4 @@
+import ChatBubbles from "./chatbubbles/ChatBubbles";
 import Navbar from "./navbar/Navbar";
 
 import Search from "./search/Search";
@@ -8,6 +9,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <Navbar />
       <Search />
+      <ChatBubbles />
     </div>
   );
 };
